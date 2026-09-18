@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile | LearnHub</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>LearnHub</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li>
+                    <a href="my-learning.html">
+                        <i class="fa-solid fa-chart-line"></i> My Learning
+                        <span class="nav-badge learning-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <i class="fa-solid fa-heart"></i> Wishlist
+                        <span class="nav-badge wishlist-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li><a href="certificates.html"><i class="fa-solid fa-award"></i> Certificates</a></li>
+                <li><a href="profile.html" class="active"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i> <span>Theme</span>
+                </button>
+
+                <a href="profile.html" class="user-nav-chip" title="View Profile">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400" alt="Avatar" class="user-nav-avatar">
+                    <span class="user-name-display">Alex</span>
+                </a>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-page-wrapper">
+            <div class="profile-card">
+                <div class="profile-header-banner"></div>
+
+                <div class="profile-header-body">
+                    <div class="profile-avatar-wrap">
+                        <img id="profileAvatarImg" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400" alt="Student Profile Avatar" class="profile-avatar-display">
+                        <label for="avatarFileInput" class="avatar-edit-label" title="Upload New Photo">
+                            <i class="fa-solid fa-camera"></i>
+                        </label>
+                        <input type="file" id="avatarFileInput" accept="image/*" style="display: none;">
+                    </div>
+
+                    <div class="profile-title-area">
+                        <h2 id="profileNameDisplay">Alex Morgan</h2>
+                        <p id="profileEmailDisplay">alex.morgan@example.com</p>
+                        <span class="badge-in-progress" id="profileRoleDisplay" style="margin-top: 6px; display: inline-block; font-size: 11px;">
+                            Full-Stack Learner
+                        </span>
+                    </div>
+
+                    <div class="profile-quick-action">
+                        <a href="my-learning.html" class="btn btn-outline btn-sm">
+                            <i class="fa-solid fa-play"></i> My Courses
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Mini Stats -->
+                <div class="profile-stats-row">
+                    <div class="profile-mini-stat">
+                        <h4 id="profileEnrolledCount">0</h4>
+                        <p>Enrolled Courses</p>
+                    </div>
+                    <div class="profile-mini-stat">
+                        <h4 id="profileCompletedCount">0</h4>
+                        <p>Completed Courses</p>
+                    </div>
+                    <div class="profile-mini-stat">
+                        <h4 id="profileCertCount">0</h4>
+                        <p>Certificates Earned</p>
+                    </div>
+                </div>
+
+                <!-- Profile Form -->
+                <div class="profile-form-body">
+                    <form id="profileForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="inputProfileName"><i class="fa-solid fa-user"></i> Full Name</label>
+                                <input type="text" id="inputProfileName" class="form-control" placeholder="Enter your full name" required>
+                                <small style="color: var(--text-muted); font-size: 11px;">This name will appear on all your earned certificates.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputProfileEmail"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                                <input type="email" id="inputProfileEmail" class="form-control" placeholder="Enter your email address" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputProfilePhone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                                <input type="text" id="inputProfilePhone" class="form-control" placeholder="+1 (555) 000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputProfileAvatar"><i class="fa-solid fa-image"></i> Profile Avatar URL</label>
+                                <input type="url" id="inputProfileAvatar" class="form-control" placeholder="https://example.com/avatar.jpg">
+
+                                <div style="margin-top: 8px;">
+                                    <span style="font-size: 12px; color: var(--text-muted);">Or pick a preset avatar:</span>
+                                    <div class="preset-avatars">
+                                        <button type="button" class="preset-avatar-btn" onclick="selectPresetAvatar('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400')">
+                                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400" alt="Preset 1">
+                                        </button>
+                                        <button type="button" class="preset-avatar-btn" onclick="selectPresetAvatar('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400')">
+                                            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400" alt="Preset 2">
+                                        </button>
+                                        <button type="button" class="preset-avatar-btn" onclick="selectPresetAvatar('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400')">
+                                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" alt="Preset 3">
+                                        </button>
+                                        <button type="button" class="preset-avatar-btn" onclick="selectPresetAvatar('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400')">
+                                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Preset 4">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="inputProfileBio"><i class="fa-solid fa-pen-nib"></i> Professional Bio / Headline</label>
+                                <textarea id="inputProfileBio" class="form-control" rows="3" placeholder="Tell us a little bit about your learning goals and background..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="profile-form-actions">
+                            <button type="button" class="btn btn-outline-danger" onclick="resetProfileToDefaults()">
+                                <i class="fa-solid fa-rotate-left"></i> Reset Defaults
+                            </button>
+
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fa-solid fa-floppy-disk"></i> Save Profile Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div>
+                    <h2>LearnHub</h2>
+                    <p>Empowering learners worldwide with modern skills, verified certificates, and flexible self-paced learning.</p>
+                </div>
+
+                <div>
+                    <h3>Navigation</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="courses.html">All Courses</a></p>
+                    <p><a href="my-learning.html">My Learning</a></p>
+                    <p><a href="wishlist.html">Wishlist</a></p>
+                </div>
+
+                <div>
+                    <h3>Student Hub</h3>
+                    <p><a href="certificates.html">Certificates</a></p>
+                    <p><a href="profile.html">Student Profile</a></p>
+                    <p><a href="settings.html">Settings</a></p>
+                </div>
+
+                <div>
+                    <h3>Direct Support</h3>
+                    <p><i class="fa-solid fa-envelope"></i> support@learnhub.edu</p>
+                    <p><i class="fa-solid fa-clock"></i> 24/7 Student Mentorship</p>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">© 2026 LearnHub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

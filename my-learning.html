@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Dashboard | LearnHub</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>LearnHub</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li>
+                    <a href="my-learning.html" class="active">
+                        <i class="fa-solid fa-chart-line"></i> My Learning
+                        <span class="nav-badge learning-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <i class="fa-solid fa-heart"></i> Wishlist
+                        <span class="nav-badge wishlist-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li><a href="certificates.html"><i class="fa-solid fa-award"></i> Certificates</a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i> <span>Theme</span>
+                </button>
+
+                <a href="profile.html" class="user-nav-chip" title="View Profile">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400" alt="Avatar" class="user-nav-avatar">
+                    <span class="user-name-display">Alex</span>
+                </a>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="learning-hero">
+            <div class="learning-hero-content">
+                <h1>Welcome Back, <span class="user-name-display">Alex</span> 👋</h1>
+                <p>Track your academic achievements, resume where you left off, and unlock verified completion certificates.</p>
+            </div>
+        </section>
+
+        <!-- ================= DASHBOARD STATISTICS (FEATURE 10) ================= -->
+        <section class="learning-dashboard-stats">
+            <div class="dashboard-stat-card">
+                <div class="stat-icon-wrap stat-icon-courses">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="stat-data">
+                    <h3 id="statTotalCourses">0</h3>
+                    <p>Enrolled Courses</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="stat-icon-wrap stat-icon-completed">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="stat-data">
+                    <h3 id="statCompletedCourses">0</h3>
+                    <p>Completed Courses</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="stat-icon-wrap stat-icon-cert">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <div class="stat-data">
+                    <h3 id="statCertificates">0</h3>
+                    <p>Certificates Earned</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="stat-icon-wrap stat-icon-progress">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div class="stat-data" style="width: 100%;">
+                    <h3 id="statOverallProgress">0%</h3>
+                    <p>Overall Learning Progress</p>
+                    <div class="custom-progress-bar" style="margin-top: 6px; height: 6px;">
+                        <div id="overallProgressBar" class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ENROLLED COURSES (FEATURE 2 & 3) ================= -->
+        <section class="my-courses-section">
+            <div class="section-header-flex">
+                <div>
+                    <h2>My Enrolled Courses</h2>
+                    <p style="color: var(--text-muted); font-size: 14px;">Keep learning to advance progress and unlock certificates.</p>
+                </div>
+
+                <a href="courses.html" class="btn btn-outline">
+                    <i class="fa-solid fa-plus"></i> Browse More Courses
+                </a>
+            </div>
+
+            <div id="courseContainer" class="my-courses-grid">
+                <!-- Loaded dynamically from localStorage by script.js -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div>
+                    <h2>LearnHub</h2>
+                    <p>Empowering learners worldwide with modern skills, verified certificates, and flexible self-paced learning.</p>
+                </div>
+
+                <div>
+                    <h3>Navigation</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="courses.html">All Courses</a></p>
+                    <p><a href="my-learning.html">My Learning</a></p>
+                    <p><a href="wishlist.html">Wishlist</a></p>
+                </div>
+
+                <div>
+                    <h3>Student Hub</h3>
+                    <p><a href="certificates.html">Certificates</a></p>
+                    <p><a href="profile.html">Student Profile</a></p>
+                    <p><a href="settings.html">Settings</a></p>
+                </div>
+
+                <div>
+                    <h3>Direct Support</h3>
+                    <p><i class="fa-solid fa-envelope"></i> support@learnhub.edu</p>
+                    <p><i class="fa-solid fa-clock"></i> 24/7 Student Mentorship</p>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">© 2026 LearnHub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

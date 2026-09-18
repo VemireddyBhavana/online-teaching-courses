@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Master In-Demand Tech Skills Online</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <!-- ================= HEADER & NAVIGATION ================= -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>LearnHub</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li>
+                    <a href="my-learning.html">
+                        <i class="fa-solid fa-chart-line"></i> My Learning
+                        <span class="nav-badge learning-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <i class="fa-solid fa-heart"></i> Wishlist
+                        <span class="nav-badge wishlist-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li><a href="certificates.html"><i class="fa-solid fa-award"></i> Certificates</a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i> <span>Theme</span>
+                </button>
+
+                <a href="profile.html" class="user-nav-chip" title="View Profile">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400" alt="Avatar" class="user-nav-avatar">
+                    <span class="user-name-display">Alex</span>
+                </a>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-sparkles"></i> Transform Your Career Today
+                </div>
+
+                <h1>
+                    Learn Without <span>Limits</span>
+                </h1>
+
+                <p>
+                    Master cutting-edge tech skills with hands-on projects, industry mentors,
+                    and verified certificates. Build real-world applications at your own pace.
+                </p>
+
+                <!-- Live Search Box -->
+                <div class="hero-search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="heroSearchInput" placeholder="What skill do you want to master? (e.g. React, AI, Python)">
+                    <button class="btn btn-primary" id="heroSearchBtn">Find Courses</button>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="courses.html" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-compass"></i> Explore All Courses
+                    </a>
+                    <a href="my-learning.html" class="btn btn-outline btn-lg">
+                        <i class="fa-solid fa-play"></i> My Learning Dashboard
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h2>50K+</h2>
+                        <p>Enrolled Students</p>
+                    </div>
+                    <div>
+                        <h2>500+</h2>
+                        <p>Expert-Led Courses</p>
+                    </div>
+                    <div>
+                        <h2>98%</h2>
+                        <p>Course Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700" alt="Students Learning Collaboratively">
+                <div class="hero-floating-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <strong style="display: block; font-size: 15px;">Official Certificates</strong>
+                        <span style="font-size: 13px; color: var(--text-muted);">Accredited upon completion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TRUSTED BY ================= -->
+        <section class="trusted">
+            <h2>Trusted by Learners at Global Companies</h2>
+            <div class="company-container">
+                <div class="company-card">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Google</span>
+                </div>
+                <div class="company-card">
+                    <i class="fa-brands fa-microsoft"></i>
+                    <span>Microsoft</span>
+                </div>
+                <div class="company-card">
+                    <i class="fa-brands fa-amazon"></i>
+                    <span>Amazon</span>
+                </div>
+                <div class="company-card">
+                    <i class="fa-brands fa-meta"></i>
+                    <span>Meta</span>
+                </div>
+                <div class="company-card">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>Apple</span>
+                </div>
+                <div class="company-card">
+                    <i class="fa-brands fa-spotify"></i>
+                    <span>Spotify</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= POPULAR CATEGORIES ================= -->
+        <section class="categories">
+            <div class="section-title">
+                <h2>Explore In-Demand Categories</h2>
+                <p>Browse through high-growth tech specializations taught by industry experts.</p>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card" onclick="window.location.href='courses.html?category=Web Development'">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>React, Next.js, Node.js, TypeScript</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='courses.html?category=Artificial Intelligence'">
+                    <i class="fa-solid fa-robot"></i>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Deep Learning, NLP, PyTorch, LLMs</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='courses.html?category=Mobile App'">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Mobile App Development</h3>
+                    <p>Flutter, Dart, iOS, Android</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='courses.html?category=UI/UX'">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>UI / UX Design</h3>
+                    <p>Figma, Prototyping, Design Systems</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='courses.html?category=Cloud'">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h3>Cloud & DevOps</h3>
+                    <p>AWS, Docker, Kubernetes, CI/CD</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='courses.html?category=Cyber Security'">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Cyber Security</h3>
+                    <p>Ethical Hacking, Network Defense</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FEATURED COURSES ================= -->
+        <section class="categories" style="margin-top: 60px;">
+            <div class="section-title">
+                <h2>Featured Masterclasses</h2>
+                <p>Start with our highest-rated programs designed to take you from beginner to professional.</p>
+            </div>
+
+            <div class="course-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-card-image-wrap">
+                        <a href="course-details.html?id=1">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="Web Development">
+                        </a>
+                        <span class="course-badge">Bestseller</span>
+                        <button class="wishlist-btn-corner" onclick="toggleWishlist(1)" data-wishlist-id="1" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-top">
+                            <span>⭐ 4.9 (1.2K reviews)</span>
+                            <span><i class="fa-regular fa-clock"></i> 42 Hours</span>
+                        </div>
+                        <h3 class="course-title">
+                            <a href="course-details.html?id=1">Complete Web Development Bootcamp</a>
+                        </h3>
+                        <p class="course-desc">Master HTML5, CSS3, Modern JS, React 18, Node.js, Express & build real apps.</p>
+                        <div class="course-instructor">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600" alt="Sarah Johnson">
+                            <span>Sarah Johnson • Senior Web Dev at Google</span>
+                        </div>
+                        <div class="course-bottom">
+                            <div class="price-wrap">
+                                <span class="price">₹999</span>
+                                <span class="level-pill">Beginner</span>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="course-details.html?id=1" class="btn btn-outline">Details</a>
+                                <button class="btn btn-primary" onclick="enrollCourse(1)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-card-image-wrap">
+                        <a href="course-details.html?id=2">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="AI & ML">
+                        </a>
+                        <span class="course-badge">Hot & New</span>
+                        <button class="wishlist-btn-corner" onclick="toggleWishlist(2)" data-wishlist-id="2" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-top">
+                            <span>⭐ 4.8 (980 reviews)</span>
+                            <span><i class="fa-regular fa-clock"></i> 38 Hours</span>
+                        </div>
+                        <h3 class="course-title">
+                            <a href="course-details.html?id=2">Artificial Intelligence & Machine Learning</a>
+                        </h3>
+                        <p class="course-desc">Neural Networks, Deep Learning with PyTorch, NLP, and Computer Vision.</p>
+                        <div class="course-instructor">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Alex Chen">
+                            <span>Alex Chen • AI Scientist at DeepMind</span>
+                        </div>
+                        <div class="course-bottom">
+                            <div class="price-wrap">
+                                <span class="price">₹1199</span>
+                                <span class="level-pill">Intermediate</span>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="course-details.html?id=2" class="btn btn-outline">Details</a>
+                                <button class="btn btn-primary" onclick="enrollCourse(2)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-card-image-wrap">
+                        <a href="course-details.html?id=3">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800" alt="UI UX Design">
+                        </a>
+                        <span class="course-badge">Top Rated</span>
+                        <button class="wishlist-btn-corner" onclick="toggleWishlist(3)" data-wishlist-id="3" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-top">
+                            <span>⭐ 4.9 (840 reviews)</span>
+                            <span><i class="fa-regular fa-clock"></i> 28 Hours</span>
+                        </div>
+                        <h3 class="course-title">
+                            <a href="course-details.html?id=3">UI / UX Design Masterclass</a>
+                        </h3>
+                        <p class="course-desc">Master Figma from scratch, wireframing, interactive prototyping & design systems.</p>
+                        <div class="course-instructor">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600" alt="Emily Davis">
+                            <span>Emily Davis • Lead Designer at Airbnb</span>
+                        </div>
+                        <div class="course-bottom">
+                            <div class="price-wrap">
+                                <span class="price">₹899</span>
+                                <span class="level-pill">Beginner</span>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="course-details.html?id=3" class="btn btn-outline">Details</a>
+                                <button class="btn btn-primary" onclick="enrollCourse(3)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-card-image-wrap">
+                        <a href="course-details.html?id=4">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800" alt="Cyber Security">
+                        </a>
+                        <span class="course-badge">Industry Certified</span>
+                        <button class="wishlist-btn-corner" onclick="toggleWishlist(4)" data-wishlist-id="4" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-top">
+                            <span>⭐ 4.7 (710 reviews)</span>
+                            <span><i class="fa-regular fa-clock"></i> 35 Hours</span>
+                        </div>
+                        <h3 class="course-title">
+                            <a href="course-details.html?id=4">Cyber Security & Ethical Hacking</a>
+                        </h3>
+                        <p class="course-desc">Penetration testing, Kali Linux tools, network security & OWASP Top 10.</p>
+                        <div class="course-instructor">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" alt="David Wilson">
+                            <span>David Wilson • Certified Ethical Hacker</span>
+                        </div>
+                        <div class="course-bottom">
+                            <div class="price-wrap">
+                                <span class="price">₹1299</span>
+                                <span class="level-pill">Advanced</span>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="course-details.html?id=4" class="btn btn-outline">Details</a>
+                                <button class="btn btn-primary" onclick="enrollCourse(4)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="courses.html" class="btn btn-primary btn-lg">
+                    <i class="fa-solid fa-list"></i> View All Available Courses
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div>
+                    <h2>LearnHub</h2>
+                    <p>Empowering millions of learners worldwide with modern skills, accredited certificates, and flexible self-paced learning.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Navigation</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="courses.html">All Courses</a></p>
+                    <p><a href="my-learning.html">My Learning Dashboard</a></p>
+                    <p><a href="wishlist.html">Wishlist</a></p>
+                </div>
+
+                <div>
+                    <h3>Student Hub</h3>
+                    <p><a href="certificates.html">Certificates</a></p>
+                    <p><a href="profile.html">Student Profile</a></p>
+                    <p><a href="settings.html">Settings & Themes</a></p>
+                    <p><a href="courses.html?category=Web%20Development">Web Development</a></p>
+                </div>
+
+                <div>
+                    <h3>Need Assistance?</h3>
+                    <p><i class="fa-solid fa-envelope"></i> support@learnhub.edu</p>
+                    <p><i class="fa-solid fa-clock"></i> 24/7 Student Mentorship</p>
+                    <p><i class="fa-solid fa-shield-halved"></i> 100% Secure Local Storage</p>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">© 2026 LearnHub. All Rights Reserved. Built with HTML5, CSS3, & Modern JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

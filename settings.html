@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings & Preferences | LearnHub</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="settingsPage">
+
+    <!-- Background Blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>LearnHub</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li>
+                    <a href="my-learning.html">
+                        <i class="fa-solid fa-chart-line"></i> My Learning
+                        <span class="nav-badge learning-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishlist.html">
+                        <i class="fa-solid fa-heart"></i> Wishlist
+                        <span class="nav-badge wishlist-count-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li><a href="certificates.html"><i class="fa-solid fa-award"></i> Certificates</a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="settings.html" class="active"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i> <span>Theme</span>
+                </button>
+
+                <a href="profile.html" class="user-nav-chip" title="View Profile">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400" alt="Avatar" class="user-nav-avatar">
+                    <span class="user-name-display">Alex</span>
+                </a>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="learning-hero">
+            <div class="learning-hero-content">
+                <h1>Platform Settings ⚙️</h1>
+                <p>Customize your learning experience, theme preferences, and platform data storage.</p>
+            </div>
+        </section>
+
+        <div class="settings-wrapper">
+            <!-- Appearance Settings (Feature 9) -->
+            <div class="settings-card">
+                <h3><i class="fa-solid fa-palette"></i> Appearance & Theme</h3>
+                <p>Select your interface theme or let it synchronize automatically across all pages.</p>
+
+                <div class="settings-row">
+                    <div class="settings-row-info">
+                        <h4>Dark Mode</h4>
+                        <p>Switch between dark night mode and clean bright light mode.</p>
+                    </div>
+                    <label class="switch" for="themeSwitch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Learning Preferences -->
+            <div class="settings-card">
+                <h3><i class="fa-solid fa-sliders"></i> Learning Preferences</h3>
+                <p>Configure notifications and learning environment defaults.</p>
+
+                <div class="settings-row">
+                    <div class="settings-row-info">
+                        <h4>Milestone Congratulations</h4>
+                        <p>Receive animated notifications when unlocking new progress levels.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <div class="settings-row-info">
+                        <h4>Certificate Verification Badges</h4>
+                        <p>Display official verified seal on all completion diplomas.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Demo Data & Testing Tools -->
+            <div class="settings-card">
+                <h3><i class="fa-solid fa-database"></i> Demo Data & Testing</h3>
+                <p>Convenient shortcuts to test the application state instantly.</p>
+
+                <div class="settings-row">
+                    <div class="settings-row-info">
+                        <h4>Populate Demo Learning Progress</h4>
+                        <p>Instantly enroll in 2 courses (1 completed at 100% with certificate + 1 in progress at 60%).</p>
+                    </div>
+                    <button class="btn btn-outline" id="populateDemoDataBtn">
+                        <i class="fa-solid fa-bolt"></i> Load Demo Data
+                    </button>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="settings-card danger-zone-card">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Danger Zone</h3>
+                <p>Erase local storage data and restore the application to fresh factory defaults.</p>
+
+                <div class="settings-row">
+                    <div class="settings-row-info">
+                        <h4>Reset All Learning Platform Data</h4>
+                        <p>Clears all enrolled courses, progress, saved wishlist items, and profile customization.</p>
+                    </div>
+                    <button class="btn btn-outline-danger" id="resetAllDataBtn">
+                        <i class="fa-solid fa-trash-can"></i> Reset All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div>
+                    <h2>LearnHub</h2>
+                    <p>Empowering learners worldwide with modern skills, verified certificates, and flexible self-paced learning.</p>
+                </div>
+
+                <div>
+                    <h3>Navigation</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="courses.html">All Courses</a></p>
+                    <p><a href="my-learning.html">My Learning</a></p>
+                    <p><a href="wishlist.html">Wishlist</a></p>
+                </div>
+
+                <div>
+                    <h3>Student Hub</h3>
+                    <p><a href="certificates.html">Certificates</a></p>
+                    <p><a href="profile.html">Student Profile</a></p>
+                    <p><a href="settings.html">Settings</a></p>
+                </div>
+
+                <div>
+                    <h3>Direct Support</h3>
+                    <p><i class="fa-solid fa-envelope"></i> support@learnhub.edu</p>
+                    <p><i class="fa-solid fa-clock"></i> 24/7 Student Mentorship</p>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">© 2026 LearnHub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
